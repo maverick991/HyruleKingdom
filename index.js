@@ -25,3 +25,5 @@ fetch(creatureUrl)
 function renderCreatures(creature){
     let addCreature = document.querySelector("#creature-collection")
 }
+let creatureCard = document.createElement("div");
+creatureCard.className = "card";
