@@ -14,3 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 const creatureUrl = 'http://localhost:3000/creatures'
+
+fetch(creatureUrl)
+.then((resp) => resp.json)
+.then((creaturesData) => {
+    creatures = (creaturesData.message)
+    renderCreatures(creatures)
+})
+
+function renderCreatures(creature){
+    let addCreature = document.querySelector("#creature-collection")
+}
