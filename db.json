@@ -1,0 +1,35 @@
+{
+    "creatures": [
+      {
+        "id": 1,
+        "name": "Bokoblins",
+        "image": "https://www.ign.com/wikis/the-legend-of-zelda-breath-of-the-wild/Bokoblin",
+        "likes": 5
+      },
+      {
+        "id": 2,
+        "name": "Moblins",
+        "image": "https://www.ign.com/wikis/the-legend-of-zelda-breath-of-the-wild/Moblin",
+        "likes": 8
+      },
+      {
+        "id": 3,
+        "name": "Lizalfos",
+        "image": "https://vignette.wikia.nocookie.net/non-aliencreatures/images/3/37/Lizalfos_(Breath_of_the_Wild).png/revision/latest?cb=20170415234829",
+        "likes": 3
+      },
+      {
+        "id": 4,
+        "name": "Lynel",
+        "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/bd/BotW_Lynel_Model.png/revision/latest?cb=20180410175205",
+        "likes": 4
+      },
+      {
+        "id": 5,
+        "name": "Hinox",
+        "image": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/b/ba/BotW_Black_Hinox_Model.png/revision/latest?cb=20181115055839",
+        "likes": 1
+      }
+      
+    ]
+  }
