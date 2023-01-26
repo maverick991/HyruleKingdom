@@ -27,3 +27,25 @@ function renderCreatures(creature){
 }
 let creatureCard = document.createElement("div");
 creatureCard.className = "card";
+
+let creatureName = document.createElement("h2");
+  creatureName.innerText = creature.name;
+
+  let creatureImage = document.createElement("img");
+  creatureImage.className = "creature-avatar";
+  creatureImage.src = creature.image;
+
+  let creatureLikes = document.createElement("p");
+  creatureLikes.innerText = creature.likes + " Likes ❤️";
+
+  function postCreature(creature){
+    let request = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+    }
+  }
+
+  
