@@ -1,51 +1,80 @@
-let addCreature = false;
+document.addEventListener("DOMContentLoaded", getCreatures)
 
-document.addEventListener("DOMContentLoaded", () => {
-    const addBtn = document.querySelector("new-creature-btn");
-    const creatureFormContainer =  document.querySelector(".container");
-    addBtn.addEventListener("click", () => {
-        addCreature = !addCreature;
-        if (addCreature){
-            creatureFormContainer.style.display = "block";
-        } else {
-            creatureFormContainer.style.display = "none";
-        }
-    });
-})
 
-const creatureUrl = 'http://localhost:3000/creatures'
+    function getCreatures(){
+    
+        fetch('http://localhost:3000/creatures')
+        .then(resp => resp.json())
+        .then(creaturesData => creaturesData.forEach(creatureObj => renderCreatures(creatureObj)))
+}
 
-fetch(creatureUrl)
-.then((resp) => resp.json)
-.then((creaturesData) => {
-    creatures = (creaturesData.message)
-    renderCreatures(creatures)
-})
+let creatureSpace = document.querySelector(".creature-collection")
+
 
 function renderCreatures(creature){
-    let addCreature = document.querySelector("#creature-collection")
-}
+    
 let creatureCard = document.createElement("div");
 creatureCard.className = "card";
 
-let creatureName = document.createElement("h2");
-  creatureName.innerText = creature.name;
+let creatureName = document.createElement("div");
+  creatureName.textContent = creature.name;
 
   let creatureImage = document.createElement("img");
   creatureImage.className = "creature-avatar";
   creatureImage.src = creature.image;
 
-  let creatureLikes = document.createElement("p");
-  creatureLikes.innerText = creature.likes + " Likes ❤️";
+  let creatureLikes = document.createElement("div");
+  creatureLikes.id = creature.id
+  creatureLikes.textContent = `${creature.likes} + Likes ❤️`;
 
-  function postCreature(creature){
-    let request = {
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-        },
-    }
+  let creatureLikesBtn = document.createElement("button")
+  creatureLikesBtn.textContent = "Like ❤️"
+  creatureLikesBtn.id = creature.id
+
+  creatureLikesBtn.addEventListener('click', () => {
+    creature.likes += 1
+    creatureLikes.textContent = `${creature.likes} + Likes ❤️`;
+    //patchCreatures(creature)
+
+    })
+
+    creatureCard.append(creatureName, creatureImage, creatureLikes, creatureLikesBtn)
+
+    creatureSpace.appendChild(creatureCard)
+
+  
+}
+
+let creatureForm = document.querySelector("form")
+
+creature.addEventListener("submit", createNewCreature)
+
+function createNewCreature(e){
+  e.preventDefault()
+  let newCreature = {
+    "name": e.target.name.value ,
+    "image": e.target.image.value,
+    "likes": 0,
   }
+  //postCreature(newCreature)
+  creatureForm.reset
+}
+
+
+//patchCreature
+
+
+
+  //function postCreature(creature){
+    //let request = {
+      //  method: 'POST',
+        //headers: {
+          //  "Content-Type": "application/json",
+            //Accept: "application/json"
+
+            //stringify
+       // },
+    //}
+  //}
 
   
