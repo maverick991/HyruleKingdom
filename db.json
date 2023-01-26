@@ -3,13 +3,13 @@
       {
         "id": 1,
         "name": "Bokoblins",
-        "image": "https://www.ign.com/wikis/the-legend-of-zelda-breath-of-the-wild/Bokoblin",
+        "image": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-hd/8/88/Bokoblin_pose.jpg?width=1600",
         "likes": 5
       },
       {
         "id": 2,
         "name": "Moblins",
-        "image": "https://www.ign.com/wikis/the-legend-of-zelda-breath-of-the-wild/Moblin",
+        "image": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-legend-of-zelda-hd/0/08/Moblin_red.png?width=1600",
         "likes": 8
       },
       {
