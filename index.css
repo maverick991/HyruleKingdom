@@ -1,10 +1,21 @@
 body {
     margin: 0;
-    background-color: #2d3407;
-  }
-  
-  h1 {
-    color: rgb(32, 215, 123);
+    background-color: #4F9153;
     text-align: center;
   }
   
+  h3 {
+    color:white;
+    text-align: center;
+  }
+  #creature-collection {
+    margin: 2rem;
+  }
+  .input-text {
+    border-radius: 5px;
+    height: 2rem;
+    width: 60%;
+    font-size: 18px;
+    font-family: monospace;
+    margin: 3px;
+  }
